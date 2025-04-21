@@ -6,8 +6,8 @@ ENV POSTGRES_USER=tota \
     POSTGRES_PASSWORD=123 \
     POSTGRES_DB=projectdb
 
+# Copy initialization script
+COPY init-db.sh /docker-entrypoint-initdb.d/
+
 # Expose PostgreSQL port
 EXPOSE 5432
-
-# Use the default PostgreSQL entrypoint
-#CMD ["postgres"]
