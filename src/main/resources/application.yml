@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: keycloackjwtdemo
+  datasource:
+    url: jdbc:postgresql://localhost:5432/projectdb
+    username: tota
+    password: 123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  servlet:
+    context-path: /api
+
+jwt:
+  secret: totakaitreinamentodevjavarumoaosenio2025
+  expiration: 86400000
+
